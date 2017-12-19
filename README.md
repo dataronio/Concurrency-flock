@@ -39,8 +39,8 @@ solve.
 
 ## Money, Money, Money
 
-We're going to write code that simulates 20 processes trying to withdraw
-money from a bank account at the same time.
+We're going to write code that simulates a number of processes trying to
+withdraw money from a bank account at the same time.
 
 The process for withdrawing money is simple:
 
