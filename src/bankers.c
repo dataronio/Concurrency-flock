@@ -86,7 +86,12 @@ void read_balance(int fd, int *balance)
  */
 int get_random_amount(void)
 {
-	return rand()%1000;
+	// vvvvvvvvvvvvvvvvvv
+	// !!!! IMPLEMENT ME:
+
+	// Return a random number between 0 and 999 inclusive using rand()
+
+	// ^^^^^^^^^^^^^^^^^^
 }
 
 /**
@@ -99,7 +104,8 @@ int main(int argc, char **argv)
 	// vvvvvvvvvvvvvvvvvv
 	// !!!! IMPLEMENT ME:
 
-	// We expect the user to add the number of simulataneous processes after the command name on the command line.
+	// We expect the user to add the number of simulataneous processes
+	// after the command name on the command line.
 	//
 	// For example, to fork 12 processes:
 	//
