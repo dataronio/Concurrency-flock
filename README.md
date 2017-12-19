@@ -63,16 +63,19 @@ This works fine for any one processes trying to withdraw money in isolation.
 Implement code to safely withdraw money from a bank account. (A
 simulated bank account, that is. Don't get your hopes up.)
 
-1. Short answer: How can things go wrong if two processes attempt the
+1. **Short answer**: How can things go wrong if two processes attempt the
    above plan at the same time? Is there more than one way things can go
    wrong?
 
 2. Study and understand the skeleton code in the `src/` directory.
 
+   **Short answer**: what do each of the arguments to `open()` mean?
+
 3. Take the skeleton code in the `src/` directory and implement the
    pieces marked. Run it.
    
-   What happens? Do things go as planned and look sensible?
+   **Short answer**: What happens? Do things go as planned and look
+   sensible? What do you speculate is happening?
 
 4. Add calls to [`flock()`](https://linux.die.net/man/2/flock) to
    capture and release an exclusive lock on the file before reading and
@@ -80,7 +83,7 @@ simulated bank account, that is. Don't get your hopes up.)
 
    The results of the run should now make sense.
    
-5. Short answer: Why is it working? How has adding locks fixed the
+5. **Short answer**: Why is it working? How has adding locks fixed the
    problems you noted in question 1? How is overall performance of the
    application affected?
 
