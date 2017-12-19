@@ -83,3 +83,12 @@ simulated bank account, that is. Don't get your hopes up.)
 5. Short answer: Why is it working? How has adding locks fixed the
    problems you noted in question 1? How is overall performance of the
    application affected?
+
+
+## Stretch Goals
+
+* Make some processes deposit money while others withdraw money.
+
+* Have some processes simply check the balance without changing it. Do
+  you need to lock? If so, do you need to use `LOCK_EX`? If not, what
+  are the advantages of your approach?
