@@ -95,18 +95,33 @@ int get_random_amount(void)
 int main(int argc, char **argv)
 {
 	// Parse the command line
-	if (argc != 2) {
-		fprintf(stderr, "usage: bankers numprocesses\n");
-		return 1;
-	}
+	
+	// vvvvvvvvvvvvvvvvvv
+	// !!!! IMPLEMENT ME:
+
+	// We expect the user to add the number of simulataneous processes after the command name on the command line.
+    //
+	// For example, to fork 12 processes:
+    //
+	//  ./bankers 12
+
+	// Check to make sure they've added one paramter to the command line
+	// with argc. If they didn't specify anything, print an error
+	// message to stderr, and exit with status 1:
+    //
+	// "usage: bankers numprocesses\n"
+	
+	// Store the number of processes in this variable:
 
 	// How many processes to fork at once
-	int num_processes = atoi(argv[1]);
+	int num_processes = IMPLEMENT ME
 
-	if (num_processes < 1) {
-		fprintf(stderr, "bankers: num processes must be greater than 0\n");
-		return 2;
-	}
+	// Make sure the number of processes the user specified is more than
+	// 0 and print an error to stderr if not, then exit with status 2:
+	//
+	// "bankers: num processes must be greater than 0\n"
+
+	// ^^^^^^^^^^^^^^^^^^
 
 	// Start with $10K in the bank. Easy peasy.
 	int fd = open_balance_file(BALANCE_FILE);
@@ -126,29 +141,23 @@ int main(int argc, char **argv)
 
 			int balance;
 
-			// Open the balance file
-			int fd = open_balance_file(BALANCE_FILE);
+			// vvvvvvvvvvvvvvvvvvvvvvvv
+			// !!!! IMPLEMENT ME
 
-			// Get an exclusive lock
-			flock(fd, LOCK_EX);
+			// Open the balance file (feel free to call the helper
+			// functions, above).
 
 			// Read the current balance
-			read_balance(fd, &balance);
 
 			// Try to withdraw money
-			if (balance >= amount) {
-				balance -= amount;
-				write_balance(fd, balance);
-				printf("Withdrew $%d, new balance $%d\n", amount, balance);
-			} else {
-				printf("Only have $%d, can't withdraw $%d\n", balance, amount);
-			}
+			//
+			// Sample messages to print:
+			//
+			// "Withdrew $%d, new balance $%d\n"
+			// "Only have $%d, can't withdraw $%d\n"
 
-			// Release the lock on the file so another process can use it
-			flock(fd, LOCK_UN);
-
-			// All done with the balance file
-			close_balance_file(fd);
+			// Close the balance file
+			//^^^^^^^^^^^^^^^^^^^^^^^^^
 
 			// Child process exits
 			exit(0);
