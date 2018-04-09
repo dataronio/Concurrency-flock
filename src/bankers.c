@@ -118,7 +118,6 @@ int main(int argc, char **argv)
 	// "usage: bankers numprocesses\n"
 	
 	// Store the number of processes in this variable:
-
 	// How many processes to fork at once
 	int num_processes = IMPLEMENT ME
 

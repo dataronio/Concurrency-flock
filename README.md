@@ -55,7 +55,7 @@ The process for withdrawing money is simple:
        * Print an error and do not modify the balance.
 4. Close the file containing the balance.
 
-This works fine for any one processes trying to withdraw money in isolation.
+This works fine for any one process trying to withdraw money in isolation.
 
 
 ## Assignment
